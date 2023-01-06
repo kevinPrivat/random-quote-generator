@@ -6595,6 +6595,10 @@ function getRandomColor() {
 
   // Your code below
 
+  document.body.style.backgroundColor = randomColor;
+  document.body.style.color = randomColor;
+  document.querySelector(".button").style.backgroundColor = randomColor;
+
   // Your code above
 }
 
@@ -6605,9 +6609,18 @@ function getRandomQuote() {
 
   // Your code below
 
+  document.querySelector("#text").textContent = randomQuote.text;
+  document.querySelector("#author").textContent = randomQuote.author;
+
   // Your code above
 }
 
 // Your code below
+
+getRandomQuote()
+
+const button = document.querySelector(".button");
+button.addEventListener("click", getRandomColor);
+button.addEventListener("click", getRandomQuote);
 
 // Your code above
